@@ -9,7 +9,7 @@ function searchElement() {
   var i;
   maxElem = +document.getElementById("max-elem").value;
   searchElem = +document.getElementById("search-elem").value;
-  if (isNaN(maxElem) || isNaN(searchElem)) {
+  if (maxElem == "" || searchElem == "" || isNaN(maxElem) || isNaN(searchElem)) {
     alert("Wrong, Please Type A Number!");
     return 0;
   }
@@ -19,7 +19,7 @@ function searchElement() {
   }
   randomArr.forEach(function(item, i, randomArr) {
     document.write("[" + item + "]");
-  return 0;
+    return 0;
   });
   document.write("<br />");
   if (randomArr.indexOf(searchElem) != -1) {
