@@ -16,8 +16,11 @@ function searchElement() {
   document.write("Output Arr: ");
   for (i = 0; i < maxElem; i++) {
     randomArr[i] = getRandomInt(1, 10);
-    document.write("[", randomArr[i], "] ");
   }
+  randomArr.forEach(function(item, i, randomArr) {
+    document.write("[" + item + "]");
+  return 0;
+});
   document.write("<br />");
   if (randomArr.indexOf(searchElem) != -1) {
     document.write("Search Elem: [", searchElem, "] Is Find! ");
