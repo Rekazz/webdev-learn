@@ -6,20 +6,17 @@ function searchElement() {
   var maxElem;
   var searchElem;
   var randomArr = [];
-  var I;
-  maxElem = document.getElementById("max-elem").type;
-  searchElem = document.getElementById("search-elem").type;
-  if (maxElem !== "number" || searchElem !== "number") {
-    alert("Wrong, Please Type A Number!");x
+  var i;
+  maxElem = +document.getElementById("max-elem").value;
+  searchElem = +document.getElementById("search-elem").value;
+  if (isNaN(maxElem) || isNaN(searchElem)) {
+    alert("Wrong, Please Type A Number!");
     return 0;
-  } else {
-    maxElem = +document.getElementById("max-elem").value;
-    searchElem = +document.getElementById("search-elem").value;
   }
   document.write("Output Arr: ");
-  for (I = 0; I < maxElem; I++) {
-    randomArr[I] = getRandomInt(1, 10);
-    document.write("[", randomArr[I], "] ");
+  for (i = 0; i < maxElem; i++) {
+    randomArr[i] = getRandomInt(1, 10);
+    document.write("[", randomArr[i], "] ");
   }
   document.write("<br />");
   if (randomArr.indexOf(searchElem) != -1) {
