@@ -20,7 +20,7 @@ function searchElement() {
   randomArr.forEach(function(item, i, randomArr) {
     document.write("[" + item + "]");
   return 0;
-});
+  });
   document.write("<br />");
   if (randomArr.indexOf(searchElem) != -1) {
     document.write("Search Elem: [", searchElem, "] Is Find! ");
