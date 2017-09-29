@@ -1,9 +1,8 @@
 function regUser() {
   var email = $("#email").val();
   var passwd = $("#passwd").val();
-  alert(email);
   var confirmPasswd = $("#confirm-passwd").val();
-  var choice = document.querySelector('input[type=checkbox]');
+  var choice = $('#choice').prop("checked");
   if (email == "") {
     alert("Требуется Заполнить Поле [Эл. Почта]");
     return 0;
@@ -13,7 +12,7 @@ function regUser() {
   } else if (confirmPasswd == "" || confirmPasswd < 6) {
     alert("Требуется Заполнить Поле [Повтор Пароля] Мин = 6 Символов");
     return 0;
-  } else if (choice.checked != true) {
+  } else if (choice != true) {
     alert("Требуется Поставить Флажок В Поле [Согласен?]")
     return 0;
   }

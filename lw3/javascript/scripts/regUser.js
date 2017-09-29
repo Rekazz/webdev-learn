@@ -9,7 +9,7 @@ function regUser() {
   } else if (passwd == "" || passwd.length < 6) {
     alert("Требуется Заполнить Поле [Пароль]  Мин = 6 Символов");
     return 0;
-  } else if (confirmPasswd == "" confirmPasswd < 6) {
+  } else if (confirmPasswd == "" || confirmPasswd < 6) {
     alert("Требуется Заполнить Поле [Повтор Пароля] Мин = 6 Символов");
     return 0;
   } else if (choice.checked != true) {
