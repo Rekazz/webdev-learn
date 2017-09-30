@@ -4,27 +4,27 @@
     <title>Регистрация Пользователя</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles/style.css" type="text/css" />
-    <script src="scripts/regUser.js"></script>
+    <script src="scripts/reg-user.js"></script>
     <script src="scripts/jquery-1.8.3.js"></script>
   </head>
   <body>
     <h3>Регистрация Пользователя</h3>
-    <form action="#" id='send' method='POST'>
+    <form action="#" id="registration-form" method="POST">
       <fieldset>
         <label>Эл. Почта</label>
-        <input type='email' id='email' placeholder='Эл. Почта' minlength="6" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}" required><span></span>
+        <input type="email" id="email" placeholder="Эл. Почта" minlength="6" required><span id="check-email"></span>
         <br>
         <label>Пароль</label>
-        <input type='password' id='passwd' placeholder='Пароль' minlength="6" required><span></span>
+        <input type="password" id="passwd" placeholder="Пароль" minlength="6" required><span id="check-passwd"></span>
         <br>
         <label>Повтор Пароля</label>
-        <input type='password' id='confirm-passwd' placeholder='Повтор Пароля' minlength="6" required><span></span>
+        <input type="password" id="confirm-passwd" placeholder="Повтор Пароля" minlength="6" required><span id="check-confirm-passwd"></span>
         <br>
         <label>Согласен?</label>
-        <input type="checkbox" id="choice" checked required>
+        <input type="checkbox" id="choice" required>
       </fieldset>
-      <div class="my-button">
-        <input type="button" value="Зарегистрироваться" form="send" onclick='regUser();'>
+      <div class="registration-block">
+        <input type="submit" id="reg-button" value="Зарегистрироваться" form="registration-form">
       </div>
     </form>   
   </body>

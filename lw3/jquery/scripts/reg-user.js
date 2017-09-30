@@ -23,3 +23,10 @@ function regUser() {
     confirm("Регистрация Пользователя Завершена!");
   }
 };
+
+window.onload = function() {
+  var regForm = $("#registration-form");
+  regForm.onsubmit = function () {
+    regUser();
+  }
+};
